@@ -4,15 +4,15 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/gruntwork-io/terratest/modules/docker"
-	terragit "github.com/gruntwork-io/terratest/modules/git"
-	"github.com/gruntwork-io/terratest/modules/random"
+	"github.com/tnn-gruntwork-io/terratest/modules/docker"
+	terragit "github.com/tnn-gruntwork-io/terratest/modules/git"
+	"github.com/tnn-gruntwork-io/terratest/modules/random"
 )
 
 func TestIntegrationGitAuth(t *testing.T) {
 	t.Parallel()
 
-	tag := "gruntwork-io/go-commons:" + strings.ToLower(random.UniqueId())
+	tag := "tnn-gruntwork-io/go-commons:" + strings.ToLower(random.UniqueId())
 	ref := terragit.GetCurrentGitRef(t)
 	docker.Build(t, "./test", &docker.BuildOptions{
 		Tags:      []string{tag},

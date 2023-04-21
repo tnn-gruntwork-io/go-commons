@@ -13,7 +13,7 @@ import (
 	"golang.org/x/crypto/ssh"
 	"golang.org/x/crypto/ssh/agent"
 
-	"github.com/gruntwork-io/go-commons/collections"
+	"github.com/tnn-gruntwork-io/go-commons/collections"
 )
 
 // Host is a remote host.

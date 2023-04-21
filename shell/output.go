@@ -1,7 +1,7 @@
 package shell
 
 // The structs and functions in this file are almost exactly the same as the version in terratest
-// (https://github.com/gruntwork-io/terratest/blob/37812f27666423c28ea22acb2bac2c80513dd318/modules/shell/output.go),
+// (https://github.com/tnn-gruntwork-io/terratest/blob/37812f27666423c28ea22acb2bac2c80513dd318/modules/shell/output.go),
 // except this version does not trim newlines from the streamed and captured texts. This ensures that the newlines
 // reflect exactly how the underlying shell commands outputted. Otherwise, the newline is always stripped out on the
 // last line, regardless of if the original command included it. That final terminating newline is more significant in
@@ -105,7 +105,7 @@ func (m *merged) WriteString(s string) (n int, err error) {
 // This function captures stdout and stderr into the given variables while still printing it to the stdout and stderr
 // of this Go program.
 // This is almost exactly the same as
-// https://github.com/gruntwork-io/terratest/blob/37812f27666423c28ea22acb2bac2c80513dd318/modules/shell/command.go#L130,
+// https://github.com/tnn-gruntwork-io/terratest/blob/37812f27666423c28ea22acb2bac2c80513dd318/modules/shell/command.go#L130,
 // except it uses a different logger.
 func readStdoutAndStderr(log *logrus.Logger, streamOutput bool, stdout, stderr io.ReadCloser) (*Output, error) {
 	out := newOutput()
