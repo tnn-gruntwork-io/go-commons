@@ -6,7 +6,7 @@ import (
 	"github.com/aws/aws-sdk-go-v2/aws"
 	"github.com/aws/aws-sdk-go-v2/service/s3"
 
-	"github.com/gruntwork-io/go-commons/errors"
+	"github.com/tnn-gruntwork-io/go-commons/errors"
 )
 
 // UploadObjectString will upload the provided string to the given S3 bucket as an object under the specified key.

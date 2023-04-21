@@ -4,7 +4,7 @@ import (
 	"github.com/aws/aws-sdk-go-v2/aws"
 	"github.com/aws/aws-sdk-go-v2/service/ec2"
 
-	"github.com/gruntwork-io/go-commons/errors"
+	"github.com/tnn-gruntwork-io/go-commons/errors"
 )
 
 // GetAllEnabledRegions will return the list of AWS regions (e.g., us-east-1) that are enabled and available to use in

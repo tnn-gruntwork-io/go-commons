@@ -8,12 +8,12 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/gruntwork-io/go-commons/files"
-	"github.com/gruntwork-io/go-commons/git"
-	"github.com/gruntwork-io/go-commons/logging"
-	"github.com/gruntwork-io/terratest/modules/environment"
-	ttlogger "github.com/gruntwork-io/terratest/modules/logger"
-	"github.com/gruntwork-io/terratest/modules/shell"
+	"github.com/tnn-gruntwork-io/go-commons/files"
+	"github.com/tnn-gruntwork-io/go-commons/git"
+	"github.com/tnn-gruntwork-io/go-commons/logging"
+	"github.com/tnn-gruntwork-io/terratest/modules/environment"
+	ttlogger "github.com/tnn-gruntwork-io/terratest/modules/logger"
+	"github.com/tnn-gruntwork-io/terratest/modules/shell"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
@@ -43,7 +43,7 @@ func TestHTTPSAuth(t *testing.T) {
 
 	tmpDir, err := ioutil.TempDir("", "git-test")
 	require.NoError(t, err)
-	require.NoError(t, git.Clone(logger, "https://github.com/gruntwork-io/terraform-aws-lambda.git", tmpDir))
+	require.NoError(t, git.Clone(logger, "https://github.com/tnn-gruntwork-io/terraform-aws-lambda.git", tmpDir))
 	assert.True(t, files.IsDir(filepath.Join(tmpDir, "modules/lambda")))
 }
 
@@ -57,7 +57,7 @@ func TestHTTPSAuthWithPath(t *testing.T) {
 	environment.RequireEnvVar(t, gitPATEnvName)
 	gitPAT := os.Getenv(gitPATEnvName)
 
-	lambdaGitURL := "https://github.com/gruntwork-io/terraform-aws-lambda.git"
+	lambdaGitURL := "https://github.com/tnn-gruntwork-io/terraform-aws-lambda.git"
 	lambdaOpts := git.CacheCredentialOptions{
 		Host:            lambdaGitURL,
 		DefaultUsername: "git",
@@ -71,7 +71,7 @@ func TestHTTPSAuthWithPath(t *testing.T) {
 	)
 	require.NoError(
 		t,
-		git.StoreCacheCredentials(logger, "git", gitPAT, "github.com", "gruntwork-io/terraform-aws-lambda.git", ""),
+		git.StoreCacheCredentials(logger, "git", gitPAT, "github.com", "tnn-gruntwork-io/terraform-aws-lambda.git", ""),
 	)
 
 	tmpDir, err := ioutil.TempDir("", "git-test")
@@ -96,7 +96,7 @@ func TestHTTPSAuthMixed(t *testing.T) {
 	environment.RequireEnvVar(t, gitPATEnvName)
 	gitPAT := os.Getenv(gitPATEnvName)
 
-	lambdaGitURL := "https://github.com/gruntwork-io/terraform-aws-lambda.git"
+	lambdaGitURL := "https://github.com/tnn-gruntwork-io/terraform-aws-lambda.git"
 	lambdaOpts := git.CacheCredentialOptions{
 		Host:            lambdaGitURL,
 		DefaultUsername: "git",
@@ -110,7 +110,7 @@ func TestHTTPSAuthMixed(t *testing.T) {
 	)
 	require.NoError(
 		t,
-		git.StoreCacheCredentials(logger, "git", gitPAT, "github.com", "gruntwork-io/terraform-aws-lambda.git", lambdaSocketPath),
+		git.StoreCacheCredentials(logger, "git", gitPAT, "github.com", "tnn-gruntwork-io/terraform-aws-lambda.git", lambdaSocketPath),
 	)
 
 	githubOpts := git.CacheCredentialOptions{
@@ -142,7 +142,7 @@ func TestHTTPSAuthMixed(t *testing.T) {
 	)
 	require.Error(
 		t,
-		git.Clone(logger, "https://github.com/gruntwork-io/terraform-aws-ci.git", ciDir),
+		git.Clone(logger, "https://github.com/tnn-gruntwork-io/terraform-aws-ci.git", ciDir),
 	)
 
 }
@@ -161,7 +161,7 @@ func TestForceHTTPS(t *testing.T) {
 
 	tmpDir, err := ioutil.TempDir("", "git-test")
 	require.NoError(t, err)
-	require.NoError(t, git.Clone(logger, "git@github.com:gruntwork-io/terraform-aws-lambda.git", tmpDir))
+	require.NoError(t, git.Clone(logger, "git@github.com:tnn-gruntwork-io/terraform-aws-lambda.git", tmpDir))
 	assert.True(t, files.IsDir(filepath.Join(tmpDir, "modules/lambda")))
 }
 

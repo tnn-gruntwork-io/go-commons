@@ -7,7 +7,7 @@ import (
 	"testing"
 
 	"github.com/google/go-github/v44/github"
-	"github.com/gruntwork-io/terratest/modules/environment"
+	"github.com/tnn-gruntwork-io/terratest/modules/environment"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"golang.org/x/oauth2"

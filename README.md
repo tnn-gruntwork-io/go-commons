@@ -1,7 +1,7 @@
 [![Maintained by Gruntwork.io](https://img.shields.io/badge/maintained%20by-gruntwork.io-%235849a6.svg)](https://gruntwork.io/?ref=repo_go-commons)
-[![Go Report Card](https://goreportcard.com/badge/github.com/gruntwork-io/go-commons)](https://goreportcard.com/report/github.com/gruntwork-io/go-commons)
-[![go.dev reference](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat-square)](https://pkg.go.dev/mod/github.com/gruntwork-io/go-commons?tab=overview)
-![go.mod version](https://img.shields.io/github/go-mod/go-version/gruntwork-io/go-commons)
+[![Go Report Card](https://goreportcard.com/badge/github.com/tnn-gruntwork-io/go-commons)](https://goreportcard.com/report/github.com/tnn-gruntwork-io/go-commons)
+[![go.dev reference](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat-square)](https://pkg.go.dev/mod/github.com/tnn-gruntwork-io/go-commons?tab=overview)
+![go.mod version](https://img.shields.io/github/go-mod/go-version/tnn-gruntwork-io/go-commons)
 
 # Gruntwork Go Commons
 
@@ -46,15 +46,15 @@ package main
 
 import (
         "github.com/urfave/cli/v2"
-        "github.com/gruntwork-io/go-commons/entrypoint"
-        "github.com/gruntwork-io/go-commons/version"
+        "github.com/tnn-gruntwork-io/go-commons/entrypoint"
+        "github.com/tnn-gruntwork-io/go-commons/version"
 )
 
 func main() {
       // Create a new CLI app. This will return a urfave/cli App with some
       // common initialization.
       // Set the version number from your app from the Version variable that is passed in at build time in `version` package
-      // for more understanding see github.com/gruntwork-io/go-commons/version
+      // for more understanding see github.com/tnn-gruntwork-io/go-commons/version
       app := entrypoint.NewApp("my-app-name", version.GetVersion())
 
       app.Authors = []*cli.Author{

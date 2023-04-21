@@ -9,8 +9,8 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/autoscaling"
 	"github.com/aws/aws-sdk-go-v2/service/ec2"
 	ec2Types "github.com/aws/aws-sdk-go-v2/service/ec2/types"
-	"github.com/gruntwork-io/terratest/modules/aws"
-	"github.com/gruntwork-io/terratest/modules/random"
+	"github.com/tnn-gruntwork-io/terratest/modules/aws"
+	"github.com/tnn-gruntwork-io/terratest/modules/random"
 	"github.com/stretchr/testify/require"
 )
 

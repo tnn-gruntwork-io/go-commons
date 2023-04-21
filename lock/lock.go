@@ -9,8 +9,8 @@ import (
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/dynamodb"
 	"github.com/aws/aws-sdk-go/service/dynamodb/dynamodbattribute"
-	"github.com/gruntwork-io/go-commons/errors"
-	"github.com/gruntwork-io/go-commons/retry"
+	"github.com/tnn-gruntwork-io/go-commons/errors"
+	"github.com/tnn-gruntwork-io/go-commons/retry"
 	"github.com/sirupsen/logrus"
 )
 

@@ -7,7 +7,7 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/secretsmanager"
 	"github.com/aws/aws-sdk-go-v2/service/secretsmanager/types"
 
-	"github.com/gruntwork-io/go-commons/errors"
+	"github.com/tnn-gruntwork-io/go-commons/errors"
 )
 
 // GetSecretsManagerMetadata returns the metadata of the Secrets Manager entry with the given ID.

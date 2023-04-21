@@ -7,10 +7,10 @@ import (
 	"github.com/aws/aws-sdk-go-v2/aws"
 	"github.com/aws/aws-sdk-go-v2/service/autoscaling"
 	autoscalingTypes "github.com/aws/aws-sdk-go-v2/service/autoscaling/types"
-	"github.com/gruntwork-io/go-commons/collections"
-	"github.com/gruntwork-io/go-commons/errors"
-	"github.com/gruntwork-io/go-commons/logging"
-	"github.com/gruntwork-io/go-commons/retry"
+	"github.com/tnn-gruntwork-io/go-commons/collections"
+	"github.com/tnn-gruntwork-io/go-commons/errors"
+	"github.com/tnn-gruntwork-io/go-commons/logging"
+	"github.com/tnn-gruntwork-io/go-commons/retry"
 )
 
 // GetAsgByName finds the Auto Scaling Group matching the given name. Returns an error if it cannot find a match.

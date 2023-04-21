@@ -5,7 +5,7 @@ import (
 
 	"github.com/aws/aws-sdk-go-v2/aws"
 	"github.com/aws/aws-sdk-go-v2/config"
-	"github.com/gruntwork-io/go-commons/errors"
+	"github.com/tnn-gruntwork-io/go-commons/errors"
 )
 
 const (

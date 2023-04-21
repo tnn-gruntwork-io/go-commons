@@ -7,7 +7,7 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/gruntwork-io/go-commons/errors"
+	"github.com/tnn-gruntwork-io/go-commons/errors"
 )
 
 // Create a URL with the given base, path parts, query string, and fragment. This method will properly URI encode
